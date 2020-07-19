@@ -5,19 +5,19 @@ import Person from './Person/Person';
 class App extends Component {
     state = {
         persons: [
-            {id:'1', name: 'Max', age: 28},
-            {id:'2', name: 'Marc', age:24},
-            {id:'3', name:'John', age:7}
+            { id: '1', name: 'Max', age: 28 },
+            { id: '2', name: 'Marc', age: 24 },
+            { id: '3', name: 'John', age: 7 }
         ],
         otherState: 'some other value',
         showPersons: false
     };
 
-    deletePersonHandler = (personIndex) =>{
+    deletePersonHandler = (personIndex) => {
         //const persons = this.state.persons.slice(); //slice without args makes a copy
         const persons = [...this.state.persons]; //copy using next-gen
         persons.splice(personIndex, 1);
-        this.setState({persons: persons});
+        this.setState({ persons: persons });
     };
 
     nameChangedHandler = (event, id) => {
@@ -34,30 +34,30 @@ class App extends Component {
         const persons = [...this.state.persons];
         persons[personIndex] = person;
 
-        this.setState({persons: persons});
+        this.setState({ persons: persons });
     };
     togglePersonsHandler = () => {
         const doesShow = this.state.showPersons;
-        this.setState({showPersons: !doesShow});
+        this.setState({ showPersons: !doesShow });
     }
 
     render() {
         const style = {
-            backgroundColor: '#1f1f1f',
+            backgroundColor: 'green !important',
             font: 'inherit',
             color: 'white',
             borderRadius: '30px',
-            boxShadow:  '6px 6px 7px #111111, -6px -6px 7px #2d2d2d',
+            boxShadow: '6px 6px 7px #111111, -6px -6px 7px #2d2d2d',
             padding: '8px',
             cursor: 'pointer',
         }
 
         let persons = null;
 
-        if (this.state.showPersons){
+        if (this.state.showPersons) {
             persons = (
                 <div>
-                    {this.state.persons.map((person, index )=> {
+                    {this.state.persons.map((person, index) => {
                         return <Person
                             click={() => this.deletePersonHandler(index)}
                             name={person.name}
@@ -68,6 +68,7 @@ class App extends Component {
                     })}
                 </div>
             );
+            style.backgroundColor = 'red';
         }
 
         return (

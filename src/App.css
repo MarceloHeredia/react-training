@@ -8,3 +8,27 @@
   margin: 100px;
   padding: 16px;
 }
+
+.red {
+  color: red;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+
+.button{
+  background-color: green;
+  font: inherit;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 6px 6px 7px #111111, -6px -6px 7px #2d2d2d;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+   background-color: lightgreen;
+   color: black;
+ }
