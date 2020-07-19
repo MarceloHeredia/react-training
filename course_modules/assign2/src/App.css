@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  color: #f1f1f1;
+  border-radius: 30px;
+  background: #1f1f1f;
+  box-shadow:  6px 6px 7px #111111,
+              -6px -6px 7px #2d2d2d;
+  margin: 100px;
+  padding: 16px;
+}
+
+.ttl{
+  border-radius: 32px;
+  background: linear-gradient(145deg, #212121, #1c1c1c);
+  box-shadow:  5px 5px 7px #101010, 
+             -5px -5px 7px #2f2f2f;
+  padding: 16px;
+}
